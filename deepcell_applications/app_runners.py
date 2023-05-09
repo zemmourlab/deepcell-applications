@@ -49,7 +49,8 @@ def run_application(arg_dict):
     if os.path.exists(outfile):
         raise IOError(f'{outfile} already exists!')
 
-    app = dca.utils.get_app(arg_dict['app'])
+    model = dca.model.loading_model(model_path=arg_dict['model_path'])
+    app = dca.utils.get_app(arg_dict['app'], model=model)
 
     # load the input image
     image = dca.prepare.prepare_input(arg_dict['app'], **arg_dict)

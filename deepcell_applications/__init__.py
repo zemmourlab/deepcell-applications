@@ -32,3 +32,4 @@ from deepcell_applications import settings
 from deepcell_applications import utils
 from deepcell_applications import argparse
 from deepcell_applications import app_runners
+from deepcell_applications import model
