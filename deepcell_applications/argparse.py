@@ -75,7 +75,7 @@ def get_arg_parser():
     parent.add_argument('--squeeze', action='store_true',
                         help='Squeeze the output tensor before saving.')
 
-    parent.add_argument('--model-path',
+    parent.add_argument('--model-path', default=None,
                         help='The path of the model loaded')
     # use subparsers to group options for different applications
     # https://stackoverflow.com/a/30217387
