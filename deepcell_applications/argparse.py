@@ -93,7 +93,7 @@ def get_arg_parser():
     # Mesmer Image file inputs
     mesmer.add_argument('--nuclear-image', '-n', required=True,
                         type=existing_file, dest='nuclear_path',
-                        help=('REQUIRED: Path to 2D single channel TIF file.'))
+                        help='REQUIRED: Path to 2D single channel TIF file.')
 
     mesmer.add_argument('--nuclear-channel', '-nc',
                         default=0, nargs='+', type=int,
