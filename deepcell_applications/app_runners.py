@@ -65,7 +65,10 @@ def run_application(arg_dict):
     kwargs = dca.utils.get_predict_kwargs(arg_dict)
     output = app.predict(image, **kwargs)
 
+    print('Segmentation control...')
     segmentation_control(image, output, arg_dict['output_directory'], square_size=5000)
+    print('Segmentation control done.')
+
     # Optionally squeeze the output
     if arg_dict['squeeze']:
         output = np.squeeze(output)
