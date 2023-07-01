@@ -1,6 +1,6 @@
 from deepcell.utils.plot_utils import create_rgb_image
 import matplotlib.pyplot as plt
-from deepcell.applications import Mesmer
+# from deepcell.applications import Mesmer
 from deepcell.utils.plot_utils import make_outline_overlay
 import os
 
@@ -93,7 +93,8 @@ def segmentation_control(image, prediction, directory_output, square_size=5000):
         plt.rcParams["figure.figsize"] = (12, 12)
         plt.imshow(overlay_data_square)
         plt.title('Control segmentation', fontsize=15)
-        plt.savefig(os.path.join(directory_output, 'controls', f'control_segmentation_{k + 1}.png'), bbox_inches='tight', dpi=500)
+        plt.savefig(os.path.join(directory_output, 'controls', f'control_segmentation_{k + 1}.png'),
+                    bbox_inches='tight', dpi=500)
         plt.close()
         print(f"Square {k + 1}/{len(squares)} saved.")
 
@@ -119,4 +120,5 @@ def segmentation_control(image, prediction, directory_output, square_size=5000):
 #     # membrane_marker = 'NaK_ATPase'
 #     # nuclear_marker = 'Dapi_1'
 #     args = get_args()
-#     segmentation_control(args.image_path, args.markers_path, args.path_output, args.membrane_marker, args.nuclear_marker, square_size=args.square_size)
+#     segmentation_control(args.image_path, args.markers_path, args.path_output, args.membrane_marker,
+#     args.nuclear_marker, square_size=args.square_size)
