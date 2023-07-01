@@ -3,7 +3,9 @@
 
 This repo is a fork of the https://github.com/vanvalenlab/deepcell-applications repository with the option to add the path to the model.
 Thus, the programm can be run without anyinternet connection needed.
-
+Is also added a quality control of the segmentation by registering an overlay of the mask on the nuclear and membrane
+markers (see the segmentation_controls.py script). It cuts the segmentation mask into chunks squares (5k pixels size) 
+to save the segmentation with good resolution and light files.
 A script and runnable Docker image for plugging DeepCell Applications (like `Mesmer`) into existing pipelines.
 
 ## Running the Python script
