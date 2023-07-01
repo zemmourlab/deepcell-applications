@@ -31,7 +31,7 @@ import numpy as np
 import tifffile
 
 import deepcell_applications as dca
-from segmentation_controls import segmentation_control
+from deepcell_applications.segmentation_controls import segmentation_control
 
 def run_application(arg_dict):
     """Takes the user-supplied command line arguments and runs the specified application
